@@ -1,0 +1,32 @@
+{
+  "name": "modukit_fe",
+  "version": "0.1.0",
+  "scripts": {
+    "dev": "modern dev",
+    "build": "modern build",
+    "start": "modern start",
+    "serve": "modern serve",
+    "new": "modern new",
+    "upgrade": "modern upgrade"
+  },
+  "engines": {
+    "node": ">=16.18.1"
+  },
+  "dependencies": {
+    "@antv/x6": "^2.18.1",
+    "@douyinfe/semi-ui": "^2.68.3",
+    "@modern-js/runtime": "2.60.6",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1"
+  },
+  "devDependencies": {
+    "@modern-js/app-tools": "2.60.6",
+    "@modern-js/tsconfig": "2.60.6",
+    "@types/jest": "~29.2.4",
+    "@types/node": "~18.11.9",
+    "@types/react": "^18.3.11",
+    "@types/react-dom": "~18.3.1",
+    "prettier": "^3.3.3",
+    "typescript": "~5.0.4"
+  }
+}
