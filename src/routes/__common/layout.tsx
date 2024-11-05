@@ -1,4 +1,4 @@
-import { Nav, Space } from '@douyinfe/semi-ui';
+import { Avatar, Dropdown, Nav, Space } from '@douyinfe/semi-ui';
 import { Outlet, useMatches, useNavigate } from '@modern-js/runtime/router';
 import { IconTree } from '@douyinfe/semi-icons-lab';
 import { useEffect, useMemo, useState } from 'react';
@@ -38,6 +38,27 @@ function Layout() {
             Modukit
           </span>
         </Space>
+        <Dropdown
+          render={
+            <Dropdown.Menu>
+              <Dropdown.Item
+                onClick={() => {
+                  localStorage.removeItem('modukit-token');
+                  navigate('/login');
+                }}
+              >
+                退出登录
+              </Dropdown.Item>
+            </Dropdown.Menu>
+          }
+        >
+          <Avatar
+            src="https://img.djwl.top/icon/-3d5176eed3e011db.jpg"
+            size="default"
+            style={{ margin: 4 }}
+            alt="User"
+          />
+        </Dropdown>
       </header>
       <div style={{ height: 'calc(100vh - 60px)', display: 'flex' }}>
         <Nav
