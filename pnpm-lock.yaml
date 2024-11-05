@@ -8,6 +8,15 @@ dependencies:
   '@antv/x6':
     specifier: ^2.18.1
     version: 2.18.1
+  '@douyinfe/semi-icons':
+    specifier: ^2.68.4
+    version: 2.68.4(react@18.3.1)
+  '@douyinfe/semi-icons-lab':
+    specifier: ^2.68.4
+    version: 2.68.4(react-dom@18.3.1)(react@18.3.1)
+  '@douyinfe/semi-illustrations':
+    specifier: ^2.68.4
+    version: 2.68.4(react@18.3.1)
   '@douyinfe/semi-ui':
     specifier: ^2.68.3
     version: 2.68.3(acorn@8.14.0)(react-dom@18.3.1)(react@18.3.1)
@@ -1459,6 +1468,16 @@ packages:
       - supports-color
     dev: false
 
+  /@douyinfe/semi-icons-lab@2.68.4(react-dom@18.3.1)(react@18.3.1):
+    resolution: {integrity: sha512-+o4S58jvbiD3nmdS8lCEDBRNuYv4hYkzqTc2j3I+CujYosplB+bra5l0QYVb+SdQPg7FMw/SQimN7bzvY2hMhg==}
+    peerDependencies:
+      react: ^16.8.0 || ^17.0.0 || ^18.0.0
+      react-dom: ^16.8.0 || ^17.0.0 || ^18.0.0
+    dependencies:
+      react: 18.3.1
+      react-dom: 18.3.1(react@18.3.1)
+    dev: false
+
   /@douyinfe/semi-icons@2.68.3(react@18.3.1):
     resolution: {integrity: sha512-CBDVc4HhtuNFdCf4KjCRO496hlO1dAwgtvLlI+2Xu1Rz+K03ssBTLTx9lVWSWeCY8W62mhF906cO5Wqtdo786w==}
     peerDependencies:
@@ -1468,8 +1487,25 @@ packages:
       react: 18.3.1
     dev: false
 
+  /@douyinfe/semi-icons@2.68.4(react@18.3.1):
+    resolution: {integrity: sha512-4M1NeLjyeF7iyHD/7shnrqcSFowVYPYazgk3413j/qs59lGNRP2U0PdQ1pg1vX+5rP13AY2jEOVG3UQfC4nw7g==}
+    peerDependencies:
+      react: ^16.8.0 || ^17.0.0 || ^18.0.0
+    dependencies:
+      classnames: 2.5.1
+      react: 18.3.1
+    dev: false
+
   /@douyinfe/semi-illustrations@2.68.3(react@18.3.1):
     resolution: {integrity: sha512-gqwKtPiCKmuC7kru+6XCpDs7gI4epnMGR9K3LZVHLXxzF7RcD37VL76rJOlI2zH52ktQSGXkz53PvgYhM1eR9A==}
+    peerDependencies:
+      react: ^16.8.0 || ^17.0.0 || ^18.0.0
+    dependencies:
+      react: 18.3.1
+    dev: false
+
+  /@douyinfe/semi-illustrations@2.68.4(react@18.3.1):
+    resolution: {integrity: sha512-hy8nd1CzyxjV1Q8+AIbq9TQAuoU95wHWVgduscp+yxXKjGQTNkXppdWoqvQ76Ib+nORBk7eXltlt5cx2xPox1g==}
     peerDependencies:
       react: ^16.8.0 || ^17.0.0 || ^18.0.0
     dependencies:

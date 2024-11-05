@@ -1,5 +1,5 @@
 function Index() {
-  return <div>hello</div>;
+  return <div style={{ height: 3000 }}>hello</div>;
 }
 
 export default Index;
