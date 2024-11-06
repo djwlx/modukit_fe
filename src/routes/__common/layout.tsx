@@ -3,12 +3,16 @@ import { Outlet, useMatches, useNavigate } from '@modern-js/runtime/router';
 import { IconTree } from '@douyinfe/semi-icons-lab';
 import { useEffect, useMemo, useState } from 'react';
 import styles from './layout.module.scss';
+import { getUserInfo } from '@/services/user';
+import { useModel } from '@modern-js/runtime/model';
+import { UserModel } from '@/models/user';
 
 function Layout() {
   const navigate = useNavigate();
   const matches = useMatches();
   const pathKey: string = matches[matches?.length - 1]?.pathname;
   const [selectKeys, setSelectKeys] = useState<string[]>([]);
+  const [{ userInfo }, { setUserInfo }] = useModel(UserModel);
 
   const menuItems = useMemo(() => {
     return [
@@ -29,6 +33,14 @@ function Layout() {
   useEffect(() => {
     setSelectKeys([pathKey]);
   }, [pathKey]);
+
+  useEffect(() => {
+    getUserInfo().then(res => {
+      if (res.data?.code === 0) {
+        setUserInfo(res.data.data);
+      }
+    });
+  }, []);
 
   return (
     <div style={{ height: '100vh' }}>
@@ -52,12 +64,9 @@ function Layout() {
             </Dropdown.Menu>
           }
         >
-          <Avatar
-            src="https://img.djwl.top/icon/-3d5176eed3e011db.jpg"
-            size="default"
-            style={{ margin: 4 }}
-            alt="User"
-          />
+          <Avatar src={userInfo?.avatar} size="default" style={{ margin: 4 }} alt="User">
+            {userInfo?.nickname || 'M'}
+          </Avatar>
         </Dropdown>
       </header>
       <div style={{ height: 'calc(100vh - 60px)', display: 'flex' }}>

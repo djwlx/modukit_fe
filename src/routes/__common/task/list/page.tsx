@@ -180,12 +180,7 @@ function TaskList() {
 
   return (
     <>
-      <Table
-        columns={columns}
-        dataSource={dataSource.concat(dataSource, dataSource)}
-        scroll={{ x: 'max-content', y: scrollHeight }}
-        empty={empty}
-      />
+      <Table columns={columns} dataSource={dataSource} scroll={{ x: 'max-content', y: scrollHeight }} empty={empty} />
     </>
   );
 }

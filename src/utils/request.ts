@@ -26,6 +26,7 @@ request.interceptors.response.use(
     if (response.status === 401) {
       localStorage.removeItem('modukit-token');
       const path = window.location.pathname;
+      Toast.error('登录过期，请重新登录');
       window.location.href = `/login?redirect=${path}`;
     } else {
       const msg = response.data?.message;
