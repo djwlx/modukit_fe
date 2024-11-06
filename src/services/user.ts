@@ -9,3 +9,6 @@ export const register = (data: any) => {
 export const getUserInfo = () => {
   return request.get('/api/user/info');
 };
+export const updateUserInfo = (data: any) => {
+  return request.post('/api/user/info', data);
+};
